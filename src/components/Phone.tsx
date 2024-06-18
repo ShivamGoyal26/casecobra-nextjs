@@ -1,0 +1,21 @@
+import { cn } from "@/lib/utils";
+import { HTMLAttributes } from "react";
+
+type PhoneProps = HTMLAttributes<HTMLDivElement> & {
+  className: string;
+  imgSrc: string;
+  dark?: boolean;
+};
+
+const Phone = ({ className, imgSrc, dark = false, ...props }: PhoneProps) => {
+  return (
+    <div
+      className={cn(
+        "relative pointer-events-none z-50 overflow-hidden",
+        className
+      )}
+    ></div>
+  );
+};
+
+export default Phone;
